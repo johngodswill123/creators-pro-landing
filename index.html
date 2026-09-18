@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Creators Pro — Your favorite tools. Discounted.</title>
-<meta name="description" content="All your favorite creative tools. Discounted for African creators. One membership, one small price." />
+<title>Creators Pro — Your Go-To Editing App. Half The Price.</title>
+<meta name="description" content="Same editing app you already use, same features. Get it for a fraction of what you're paying now, billed in naira." />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
@@ -32,15 +32,15 @@
   .display {
     font-family: 'Bricolage Grotesque', sans-serif;
     font-weight: 800;
-    line-height: 0.92;
+    line-height: 0.96;
     letter-spacing: -0.025em;
   }
 
-  /* NAV */
+  /* NAV — minimal, nothing to wander off to */
   nav {
     padding: 22px 24px;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     position: relative;
     z-index: 10;
@@ -62,27 +62,13 @@
     margin-left: 4px;
     vertical-align: middle;
   }
-  .nav-meta {
-    font-size: 13px;
-    color: rgba(250, 247, 242, 0.6);
-    display: flex;
-    align-items: center;
-    gap: 6px;
-  }
-  .nav-meta .dot {
-    width: 6px; height: 6px;
-    background: var(--yellow);
-    border-radius: 50%;
-    animation: pulse 2s ease-in-out infinite;
-  }
-  @keyframes pulse { 0%,100% { opacity: 1; } 50% { opacity: 0.3; } }
 
-  /* HERO — full-bleed conversion focus */
+  /* HERO — the whole page is the offer */
   .hero {
     flex: 1;
     display: flex;
     align-items: center;
-    padding: 40px 24px 80px;
+    padding: 20px 24px 60px;
     position: relative;
     overflow: hidden;
   }
@@ -103,11 +89,12 @@
     pointer-events: none;
   }
   .hero-inner {
-    max-width: 900px;
+    max-width: 640px;
     margin: 0 auto;
     position: relative;
     z-index: 2;
     width: 100%;
+    text-align: center;
   }
 
   .eyebrow {
@@ -123,13 +110,12 @@
     letter-spacing: 0.15em;
     text-transform: uppercase;
     border-radius: 999px;
-    margin-bottom: 28px;
+    margin-bottom: 24px;
   }
 
   h1 {
-    font-size: clamp(46px, 10vw, 104px);
-    margin-bottom: 28px;
-    max-width: 13ch;
+    font-size: clamp(38px, 8vw, 64px);
+    margin-bottom: 20px;
   }
 
   /* highlighter marker */
@@ -150,46 +136,56 @@
   }
 
   .lede {
-    font-size: clamp(17px, 2.3vw, 21px);
+    font-size: clamp(16px, 2.3vw, 19px);
     color: rgba(250, 247, 242, 0.78);
-    max-width: 48ch;
-    margin-bottom: 36px;
-    line-height: 1.5;
+    max-width: 46ch;
+    margin: 0 auto 36px;
+    line-height: 1.55;
   }
 
-  /* category pills */
-  .pills {
+  .prices {
     display: flex;
+    justify-content: center;
+    gap: 14px;
     flex-wrap: wrap;
-    gap: 8px;
-    margin-bottom: 40px;
+    margin-bottom: 32px;
   }
-  .pill {
-    padding: 7px 14px;
-    background: rgba(255, 255, 255, 0.06);
-    border: 1px solid rgba(255, 255, 255, 0.12);
-    border-radius: 999px;
-    font-size: 13px;
-    color: rgba(250, 247, 242, 0.85);
-    font-weight: 500;
+  .price-card {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 14px;
+    padding: 16px 26px;
+    min-width: 140px;
+  }
+  .price-label {
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: rgba(250, 247, 242, 0.55);
+    margin-bottom: 6px;
+  }
+  .price-figure {
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-weight: 800;
+    font-size: 26px;
+    color: var(--yellow);
   }
 
   .ctas {
     display: flex;
-    flex-wrap: wrap;
-    gap: 12px;
-    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
   }
   .btn-primary {
     display: inline-flex;
     align-items: center;
     gap: 10px;
-    padding: 18px 30px;
+    padding: 19px 36px;
     background: var(--yellow);
     color: var(--ink);
     border-radius: 999px;
     font-weight: 600;
-    font-size: 16px;
+    font-size: 17px;
     text-decoration: none;
     transition: transform 0.15s, box-shadow 0.15s;
     box-shadow: 0 4px 0 rgba(0,0,0,0.2);
@@ -220,19 +216,12 @@
   }
 
   .trust {
-    margin-top: 28px;
     font-size: 14px;
     color: rgba(250, 247, 242, 0.55);
     display: flex;
+    justify-content: center;
     align-items: center;
     gap: 12px;
-  }
-  .trust strong {
-    color: var(--cream);
-    font-weight: 600;
-  }
-  .trust::before {
-    display: none;
   }
   .trust-badge {
     display: inline-flex;
@@ -257,7 +246,7 @@
     line-height: 1.6;
   }
   .footer-inner {
-    max-width: 900px;
+    max-width: 640px;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
@@ -269,8 +258,8 @@
   footer a:hover { color: var(--yellow); }
 
   @media (max-width: 600px) {
-    .hero { padding: 20px 22px 60px; }
-    .trust::before { display: none; }
+    .hero { padding: 10px 22px 40px; }
+    .price-card { min-width: 120px; padding: 14px 18px; }
   }
 </style>
 </head>
@@ -278,26 +267,29 @@
 
 <nav>
   <a href="#" class="logo">Creators Pro</a>
-  <div class="nav-meta"><span class="dot"></span> Live now</div>
 </nav>
 
 <section class="hero">
   <div class="hero-inner">
-    <div class="eyebrow">Built for African Creators</div>
+    <div class="eyebrow">Video Editing</div>
 
-    <h1 class="display">Your favorite creative tools. <span class="mark">Discounted.</span></h1>
+    <h1 class="display">Your Go-To Editing App. <span class="mark">Half The Price.</span></h1>
 
-    <div class="pills">
-      <span class="pill">AI Writing</span>
-      <span class="pill">Video Editing</span>
-      <span class="pill">Design</span>
-      <span class="pill">Coding</span>
-      <span class="pill">Image Gen</span>
-      <span class="pill">Research</span>
+    <p class="lede">Same app you already use, same features. Most people pay a lot more for it elsewhere — here it's a fraction of that, billed straight in naira.</p>
+
+    <div class="prices">
+      <div class="price-card">
+        <div class="price-label">Monthly</div>
+        <div class="price-figure">NGN 6,900</div>
+      </div>
+      <div class="price-card">
+        <div class="price-label">Yearly</div>
+        <div class="price-figure">NGN 49,900</div>
+      </div>
     </div>
 
     <div class="ctas">
-      <a href="https://creatorsprohub.com" class="btn-primary cta-button">Open creatorsprohub.com →</a>
+      <a href="https://creatorsprohub.com/details/13" class="btn-primary cta-button">Get This Deal →</a>
     </div>
 
     <div class="trust">
